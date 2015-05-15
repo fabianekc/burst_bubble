@@ -1,0 +1,23 @@
+<%= form_for(@user, url: {action: "password", controller: "static"},
+                    html: { class: "form-signin",
+                            style: "display:initial" } ) do |f| %>
+  <div class="well">
+    <div class="jumbotron" style="background-color:inherit">
+      <h1>Set Password</h1>
+      <p class="lead">Specify password to access this Private Information
+        Archive:</p>
+      <div class="form-group" style="margin-left:100px">
+        <label for="user_password" class="sr-only">Password</label>
+        <%= f.password_field :password, class: "form-control",
+              placeholder: "Password" %>
+        <br>
+        <label for="user_password_confirmation" class="sr-only">Password</label>
+        <%= f.password_field :password_confirmation, class: "form-control",
+              placeholder: "Password Confirmation" %>
+      </div>
+    </div>
+  </div>
+  <div class="text-right">
+    <%= f.submit "Next", class: "btn btn-primary btn-lg" %>
+  </div>
+<% end %>

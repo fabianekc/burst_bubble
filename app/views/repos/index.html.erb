@@ -1,0 +1,25 @@
+<h2 class="sub-header">
+  <%= (@repos.count+1).to_s %>
+  Repositories</h2>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Last Update</th>
+        <th>Name</th>
+        <th>Data Items</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render partial: "repo",
+          collection: @repos,
+          as: :item %>
+      <tr>
+        <td><%= "" %></td>
+        <td><%= link_to "Logs", log_path %></td>
+        <td><%= Log.all.count.to_s %></td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

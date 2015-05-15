@@ -1,0 +1,6 @@
+<%= { submission: @respLast,
+      resultAvg: @respAvg,
+      resultCnt: @respCnt,
+      resultTxt: number_with_precision(@respAvg, precision: 2) +
+        " Durschnitt (" + @respCnt.to_s + " Teilnehmer)",
+      vat: @vat }.to_json.to_s.html_safe %>

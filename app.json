@@ -1,0 +1,13 @@
+{
+  "name": "Burst Bubble Archive",
+  "description": "An archive that hosts the browser history through the Burst Bubble browser extension in the Amazon cloud.",
+  "website": "https://www.crowdstatus.net",
+  "repository": "https://github.com/fabianekc/burst_bubble",
+  "logo": "https://s3-eu-west-1.amazonaws.com/crowdstatusimages/logo_fb.png",
+  "keywords": ["burst_bubble"],
+  "success_url": "/configure",
+  "addons": ["heroku-postgresql:hobby-dev"],
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
+  }
+}

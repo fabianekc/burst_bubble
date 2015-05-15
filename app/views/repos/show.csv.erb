@@ -1,0 +1,10 @@
+<%- headers = ['CreatedAt', 'Value', 'Author', 'IP', 'Header'] -%>
+<%= CSV.generate_line headers %>
+<%- @responses.each do |response| -%>
+  <%= CSV.generate_line([response.id,
+                         response.created_at,
+                         response.value,
+                         response.author,
+                         response.request_ip,
+                         response.request_header]).html_safe %>
+<%- end -%>

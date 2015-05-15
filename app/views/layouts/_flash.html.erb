@@ -1,0 +1,12 @@
+<% flash.each do |key, value|
+  puts "============="
+  puts key.to_s
+     if !key.nil? && !value.nil? %>
+       <p>&nbsp;</p>
+       <div class="alert alert-<%= key.to_s=="notice" ? "warning" : key %>">
+         <button type="button" class="close" data-dismiss="alert">
+           &times;</button>
+         <%= value.html_safe %>
+       </div>
+   <% end
+    end unless flash.nil? %>

@@ -1,0 +1,16 @@
+<h2 class="sub-header">Logs</h2>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Timestamp</th>
+        <th width="100%">Event</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render partial: "log",
+          collection: @logs,
+          as: :item %>
+    </tbody>
+  </table>
+</div>

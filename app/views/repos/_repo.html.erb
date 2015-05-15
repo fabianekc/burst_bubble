@@ -1,0 +1,5 @@
+<tr>
+  <td><%= "" %></td>
+  <td><%= link_to myTitle(item), repo_path(id: item.to_s) %></td>
+  <td><%= Response.where(vat: item).count.to_s %></td>
+</tr>

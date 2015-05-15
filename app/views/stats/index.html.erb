@@ -1,0 +1,19 @@
+<h2 class="sub-header">
+  <%= (1).to_s %>
+  Statistic</h2>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Last Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= link_to "Rating Dashboard", stat_path(id: 1) %></td>
+        <td style="white-space:nowrap"><%= Time.now.to_s %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

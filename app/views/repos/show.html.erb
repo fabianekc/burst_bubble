@@ -1,0 +1,20 @@
+<h2 class="sub-header"><%= cst(@repo.name) unless @repo.nil? %></h2>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Timestamp</th>
+        <th>Value</th>
+        <th>Author</th>
+        <th width="100%">Comment</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render partial: "response",
+          collection: @responses,
+          as: :item %>
+    </tbody>
+  </table>
+  <%= link_to "Delete All", repo_path, method: "delete",
+      class: "btn btn-danger" %>
+</div>

@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  template: template0
+  enconding: unicode
+  database: bb-dev
+  pool: 5
+  username: data
+  password: data
+
+test:
+  adapter: postgresql
+  template: template0
+  encoding: unicode
+  database: bb-test
+  pool: 5
+  username: data
+  password: data
